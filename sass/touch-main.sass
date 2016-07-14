@@ -1,0 +1,433 @@
+@import compass
+@import partials/_variables
+@import partials/_rwd
+// activety model
+@import libs/_timeline-style
+@import libs/_slick
+@import _kv
+@import _footer
+
+
+::selection
+  background: #57c464
+  color: #fff
+
+.main-color
+  color: $main-color
+.main-deep
+  color: $main-deep
+.subc-01
+  color: $subc-01
+.subc-02
+  color: $subc-02
+
+.clrfix
+  clear: both
+  display: inline-block
+  &:after,&:before
+    clear: both
+    display: inline-block
+
+ol,ul
+  li
+    list-style-type: none
+
+p
+  font-size: 1.5rem
+  line-height: 2.2rem
+  color: #555
+  letter-spacing: 0.1rem
+
+.btn-sale
+  text-align: center
+  font-family: 'NotoSans'
+  a
+    background: $white
+    color: $subc-01
+    padding: 10px 30px
+    border: 2px solid rgba(137,137,137,0.5)
+    +border-radius(35px)
+    font-size: 2rem
+    +transition(all 0.4s)
+    &:hover
+      border-color: $main-color
+      color: $white
+      background: $main-color
+.btn
+  +transition(all 0.3s)
+  &:hover
+    text-decoration: none
+  &:focus
+    color: #fff
+.btn-l
+  font-size: 1.7rem
+
+.btn-c1
+  background: #f7b516
+  box-shadow: 1px 1px 1px #b18009
+  color: #fff
+  &:hover
+    background: #ffce02
+    color: #fff
+.btn-c2
+  border: 2px solid rgba(247, 181, 22, 0.65)
+  border-radius: 18px
+  padding: 5px 24px
+  font-size: 1.6rem
+  color: #929292
+  &:hover
+    border-color: $main-color
+    color: $main-color
+//buttons
+.btn-default
+  color: #fff
+  background: $main-color
+  box-shadow: 1px 1px 1px $main-deep
+.title
+  color: $main-color
+  font-size: 2.4rem
+  +min-w48
+    font-size: 2.6rem
+.subtitle
+  color: inherit
+  font-size: 1.8rem
+  color: $subc-02
+
+//nav
+
+.navbar
+  border: transparent
+  padding-left: 0
+  padding-right: 0
+  +border-radius(0px)
+  //navbar > ul
+  .navbar-nav
+    padding-top: 0
+    margin: 0 -14px
+    +min-w60
+      margin: 0 0 0 -15px
+    +min-w64
+      margin: 5px 0 0 25px
+      float: left
+
+    +min-w75
+      margin-left: 15%
+    li
+      a
+        color: $white
+        +transition(all 0.6s)
+        +min-w64
+          letter-spacing: 0.1rem
+    .active
+      a
+        color: $main-color
+    a:hover
+      text-shadow: 1px 1px 1px $subc-02
+      color: $main-color
+      background: transparent
+//Layout
+.wrapper
+  overflow: hidden
+#header
+  // background: url(http://d9nqqwcssctr8.cloudfront.net/wp-content/uploads/2014/11/24014743/HEADER-3_June-July16_Web-Banner_1500x1000px.jpg)
+  background: url(../images/bg02.jpg)
+  background-size: cover
+  background-attachment: fixed
+  height: 100vh
+  min-height: 40em
+  //timeline
+  .cd-horizontal-timeline
+    margin: 0 0
+    padding-top: 0rem
+    +min-w60
+      padding-top: 6rem
+    .events
+      a
+        font-size: 1.6rem
+        &::after
+          border: 1px solid #152846
+          background-color: $main-color
+
+    .events-wrapper
+      &::after,&::before
+        background-image: none
+  .events-content
+    position: relative
+    z-index: 1
+    display: inline-block
+    margin-top: 0
+    min-height: 30rem
+    +min-w30
+      margin-top: 5%
+    h2
+      color: $main-color
+      text-align: justify
+      font-size: 1.8rem
+      +min-w48
+        font-size: 2.6rem
+    em,p
+      color: #fff
+      text-shadow: 1px 1px 0px #000
+
+.goto
+  display: none
+  +min-w40
+    display: block
+  a
+    text-decoration: none
+    background-color: rgba(255, 255, 255, 0.5)
+    box-shadow: 0px 3px 3px #333
+    color: #233445
+    border: 2px solid #fff
+    line-height: 40px
+    text-align: center
+    font-size: 1.5rem
+
+    display: block
+    position: relative
+    margin: -7rem auto 0
+    width: 120px
+    height: 45px
+    padding: 0
+    z-index: 16
+    +border-radius(20px)
+    +transition(all 0.3s)
+    +min-w80
+      margin: -5rem auto 0
+    +min-w86
+      margin: -9rem auto 0
+    +min-w90
+      margin: 0 auto 0
+    &:hover
+      background: rgba(255, 255, 255, 0.5)
+      color: $white
+
+
+.flex-row
+  flex-direction: row
+  display: inline-flex
+  width: 100%
+  vertical-align: middle
+  +min-w48
+    width: 200%
+.flex-row-reverse
+  flex-direction: row-reverse
+.flex-item
+  width: calc(100% /3)
+  height: 60px
+  text-align: center
+  line-height: 60px
+
+//NAV
+.header-bg-none
+  .navbar
+    background: #1c1517
+    margin-bottom: 0
+    .logo
+      background-color: none
+      background-repeat: no-repeat
+      width: 45px
+      height: 50px
+      float: left
+      margin: 5px 0 0 5px
+      padding: 6px
+.navbar-header
+  font-family: 'NotoSans'
+  background: none
+  border-top: 3px solid $main-color
+  padding: 0
+  margin: 0
+  +min-w48
+    background: transparent
+    border-top: transparent
+  .item2
+    color: #fff
+    width: 80%
+    font-size: 1.8rem
+    font-family: 'NotoSans'
+    +min-w48
+      display: none
+
+.navbar-toggle
+  margin-right: 0
+  border-color: transparent
+  float: right
+  width: auto
+  .icon-bar
+    background-color: #fff
+    border-bottom: 3px solid #fff
+  .navbar-form
+    border-color: $main-deep
+  &:hover,&:focus,&:active
+    background: transparent
+
+.logo
+  font-size: 10pt
+  background: url(../images/logo.svg) no-repeat
+  width: 50px
+  height: 50px
+  float: left
+  margin: 5px 0 0 5px
+  a
+    text-indent: -9999px
+    display: block
+    height: inherit
+
+//boxs
+
+.main-top
+  background: url(../images/pattern.png) top
+  min-height: 400px
+  padding-bottom: 25px
+  background-repeat: no-repeat
+  +min-w48
+    background-repeat: repeat
+.box-wrap
+  margin-top: 15px
+  padding: 10px
+  width: auto
+  background: rgba(85, 85, 85, 0.06)
+  +box-shadow(1px 2px 3px rgba(195, 195, 195, 0.88))
+  +min-w48
+    padding: 15px
+  +min-w60
+    width: 940px
+    margin: 3rem auto 1rem
+
+.box-title
+  font-family: "Playfair Display", serif
+  background: url(../images/bg-title.png) no-repeat
+  min-height: 115px
+  margin: 10px 0
+  padding: 10px 0 0 20px
+  +min-w40
+    margin-top: 30px
+    padding: 25px 0 0 20px
+  span
+    display: block
+  .title
+    margin-top: 10px
+
+.box-content
+  text-align: justify
+  background: rgba(255, 255, 255, 0.7)
+  padding: 20px
+  font-family: 'NotoSans'
+  +min-w48
+    font-size: 1.6rem
+  .top
+    font-family: "Playfair Display", serif
+    color: #fff
+    padding: 15px
+    display: inline-block
+    font-size: 1.8rem
+    line-height: 1.6
+    background: $main-color
+    box-shadow: 4px 4px 0px 1px $subc-01
+    span
+      font-size: 2.6rem
+      font-size: 1.8rem
+      display: block
+  .subtitle
+    margin: 15px 0
+    color: $subc-02
+    line-height: 1.4
+    border-bottom: 2px solid $main-color
+    padding-bottom: 10px
+    span
+      display: block
+  ul
+    span
+      color: $main-color
+    li
+      margin-bottom: 5px
+      +min-w48
+        margin-bottom: 10px
+    ul
+      padding-left: 43px
+
+.slick-dots
+  display: block
+  text-align: center
+  li
+    display: inline-block
+    button
+      background: none
+      border: none
+      +border-radius(100%)
+
+.info
+  .box-wrap
+    width: auto
+    margin: 3rem auto 1rem
+    padding: 15px
+    background: rgba(85, 85, 85, 0.06)
+    +box-shadow(1px 2px 3px rgba(195, 195, 195, 0.88))
+    +min-w48
+      margin: 0rem auto 1rem
+
+.box-read
+  margin-top: 3em
+  .img
+    display: inline-table
+    margin-bottom: 15px
+    .box-btm
+      margin-top: 20px
+
+.box-read.box-btm
+  padding: 25px 0
+  margin: 3rem 0 0
+  background: #ddd
+
+.box-read-footer
+  margin: 3rem 0
+
+.box-read:nth-child(2)
+  margin-bottom: 3rem
+
+.box-buy
+  margin-top: 25px
+  .title
+    color: #fff
+  .img6
+    background-image: url(../images/banner-06.jpg)
+    background-color: #fefdf8
+    background-size: cover !important
+    background-position: 100% 40%
+    min-height: 220px !important
+  p
+    margin-top: 20px
+    color: #fff
+    font-size: 1.6rem
+
+//slideshow
+.single-item
+  text-align: center
+  background: #000
+  margin-bottom: 25px
+  .video
+    width: 100%
+    min-height: 280px
+    +min-w60
+      margin: 0 auto 25px
+    iframe
+      width: 100%
+      height: 350px
+      +min-w48
+        height: 500px
+      +min-w70
+        width: 100%
+        padding: 0 10rem
+//map
+.iframe-rwd
+  position: relative
+  min-height: 300px
+  overflow: hidden
+
+.iframe-rwd iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  pointer-events: none

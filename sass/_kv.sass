@@ -1,0 +1,50 @@
+.img1
+  background-image: url(../images/banner-party-01.png)
+  background-color: #d0d0d0
+.img2
+  background-image: url(../images/banner-party-02.png)
+  background-color: #1c1517
+.img3
+  background-image: url(../images/banner-03.jpg)
+  background-color: #f8fafa
+  +min-w60
+    background-size: cover!important
+.img4
+  background-image: url(../images/banner-new1.jpg)
+  background-color: #b7b6b2
+  background-position: center
+.img5
+  background-image: url(../images/banner-new2.jpg)
+  background-color: #fefdf8
+  background-position: center
+
+.kv
+  margin: 0
+  display: block
+  .banner
+    background-size: cover
+    min-height: 180px
+    padding: 5px 0
+    +transition(all 0.3s)
+    +min-w25
+      min-height: 218px
+    +min-w30
+      min-height: 270px
+      background-size: cover
+    +min-w40
+      min-height: 385px
+    +min-w48
+      min-height: 430px
+    +min-w60
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+
+#map
+  height: 380px
+  text-align: center
+  margin-bottom: 0
+  padding-left: 4em
+  img
+    max-width: 100%
+    height: auto
